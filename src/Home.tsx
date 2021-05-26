@@ -1,13 +1,13 @@
 import React from "react";
-
+import AudioPlayer from './AudioPlayer'
 function Home() {
   return (
     <div
-      className="relative z-50 w-[94vw] h-[94vh] bg-white rounded-2xl shadow-2xl"
+      className="relative z-10 w-[94vw] h-[94vh] bg-white rounded-2xl shadow-2xl"
       style={{ boxShadow: "0px 0px 800px 500px #00000099" }}
     >
       <svg
-        className="absolute top-20 left-0 w-[calc(848px*(1))] h-[calc(398px*(1))]"
+        className="absolute top-16 SS:top-20 sm:top-16 md:top-20 left-0 w-[calc(848px*(2/6))] h-[calc(398px*(2/6))] SS:w-[calc(848px*(3/6))] SS:h-[calc(398px*(3/6))] Sl:w-[calc(848px*(3.5/6))] Sl:h-[calc(398px*(3.5/6))] sm:w-[calc(848px*(4/6))] sm:h-[calc(398px*(4/6))] md:w-[calc(848px*(5/6))] md:h-[calc(398px*(5/6))] lg:w-[calc(848px*(1))] lg:h-[calc(398px*(1))]"
         width="1536"
         height="692"
         viewBox="0 0 768 346"
@@ -76,7 +76,7 @@ function Home() {
         </defs>
       </svg>
       <div
-        className="absolute font-round top-10 left-20 text-blueGray-900 text-[50px] sm:text-[100px] md:text-[200px] lg:text-[250px]"
+        className="absolute font-round top-6 left-14 SS:top-16 SS:left-16 Sl:top-10 sm:top-14 md:top-10 Sl:left-20 text-blueGray-900 text-[125px] Sl:text-[100px] sm:text-[125px] md:text-[150px] lg:text-[200px]"
         style={{ textShadow: "28px 26px 10px rgba(86, 86, 86, 0.26)" }}
       >
         Ohm
@@ -113,25 +113,26 @@ function Home() {
           boxShadow: "0px 0px 800px 412px rgba(255, 255, 255, 1)",
         }}
       ></div>
-      <section className="w-full h-full pt-32 pr-32">
-        <article className="grid grid-cols-1 ml-auto w-max gap-y-4">
-          <h1 className="px-2 py-1 text-xl bg-yellow-200 rounded-lg text-amber-600">
+      <section className="lg:pt-32 lg:pr-32 Xl:pr-20 Xl:pt-28 md:pr-20 md:pt-72 sm:pr-10 sm:pt-[15rem] Sl:pr-16 Sl:pt-44 SS:pr-6 SS:pt-56 pr-4 pt-48">
+        <article className="relative z-20 grid grid-cols-1 ml-auto w-max gap-y-4">
+          <h1 className="px-2 py-1 text-sm text-white rounded-lg bg-blueGray-800 sm:bg-yellow-200 Sl:text-base sm:shadow-xl Xl:shadow-none Xl:text-lg lg:text-xl sm:text-amber-600">
             The Sound of infinity.
           </h1>
-          <h1 className="px-2 py-1 text-xl bg-yellow-200 rounded-lg text-amber-600">
+          <h1 className="px-2 py-1 text-sm text-white rounded-lg bg-blueGray-800 sm:bg-yellow-200 Sl:text-base sm:shadow-xl Xl:shadow-none Xl:text-lg lg:text-xl sm:text-amber-600">
             The Sound Which lies in everything.
           </h1>
-          <h1 className="px-2 py-1 text-xl bg-yellow-200 rounded-lg text-amber-600">
+          <h1 className="px-2 py-1 text-sm text-white rounded-lg bg-blueGray-800 sm:bg-yellow-200 Sl:text-base sm:shadow-xl Xl:shadow-none Xl:text-lg lg:text-xl sm:text-amber-600">
             The Sound Which is itself a mistery.
           </h1>
-          <h1 className="px-2 py-1 text-xl bg-yellow-200 rounded-lg text-amber-600">
+          <h1 className="px-2 py-1 text-sm text-white rounded-lg bg-blueGray-800 sm:bg-yellow-200 Sl:text-base sm:shadow-xl Xl:shadow-none Xl:text-lg lg:text-xl sm:text-amber-600">
             The Sound from which mind experiences <br/> calmness and peace .
           </h1>
-          <h1 className="px-2 py-1 text-xl bg-yellow-200 rounded-lg text-amber-600">
+          <h1 className="px-2 py-1 text-sm text-white rounded-lg bg-blueGray-800 sm:bg-yellow-200 Sl:text-base sm:shadow-xl Xl:shadow-none Xl:text-lg lg:text-xl sm:text-amber-600">
             The Sound which Resembles<br/> the dance of infinite .
           </h1>
         </article>
       </section>
+      <AudioPlayer/>
     </div>
   );
 }

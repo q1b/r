@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode:'jit',
   purge: [
@@ -6,12 +7,20 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors:{...colors},
+          screens:{
+        'SS':"450px",
+        'Sl':"525px",
+        'Xl':"880px",
+        ...defaultTheme.screens
+      },
     extend: {
+      colors:{
+        ...colors
+      },
       fontFamily:{
         jetMono : 'JetBrains Mono, monospace' ,
         round: 'Nova Round, cursive'
-      }
+      },
     },
   },
   variants: {
